@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1644334281599" clover="3.2.0">
+  <project timestamp="1644334281599" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="10" coveredelements="10" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="injectable.ts" path="/Users/lujunsheng/program1/di/src/injectable.ts">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="18" type="stmt"/>
+      <line num="8" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="18" type="stmt"/>
+    </file>
+  </project>
+</coverage>
