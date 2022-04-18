@@ -58,8 +58,6 @@ class Container {
     if (Array.isArray(paramTypes) && paramTypes.length) {
       const injectTokens = Reflect.getMetadata(InjectToken, Cls);
 
-      console.log(injectTokens, 'injectTokens');
-
       // 替换 使用inject装饰器描述的 参数
       if (injectTokens) {
         if (this.__debug) {
