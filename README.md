@@ -5,7 +5,8 @@ npm install @lujs/di
 ```
 
 ### api
-#### injectable
+#### injectable()
+The injectable decorator marks a class as injectable, meaning that its dependencies can be resolved and injected by the Container.
 ```typescript
 import { injectable, container } from './injectable';
 class B {
@@ -22,7 +23,8 @@ const a = container.resolve(A)
 console.log(a.b) // 'b'
 ```
 
-#### singleton
+#### singleton()
+The singleton decorator marks a class as a singleton, meaning that the same instance will be used every time 
 ```typescript
 import { singleton, container } from './injectable';
 class B {
@@ -39,7 +41,8 @@ const a2 = container.resolve(A)
 
 console.log(a1 === a2) // true
 ```
-#### inject
+#### inject()
+The inject decorator marks a constructor parameter as a dependency to be resolved and injected by the Container.
 ```typescript
 import { inject, InjectToken } from './injectable';
 
