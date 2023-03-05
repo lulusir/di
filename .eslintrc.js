@@ -24,5 +24,6 @@ module.exports = {
     'import/no-unresolved': 'off',
     'max-classes-per-file': 'off',
     'no-useless-constructor': 'off',
+    'class-methods-use-this': 'off',
   },
 };

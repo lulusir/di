@@ -2,3 +2,4 @@ node_modules
 dist
 mock
 chart
+*.config.ts

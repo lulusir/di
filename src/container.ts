@@ -1,9 +1,10 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-use-before-define */
-import { InjectToken } from './inject';
+import { DelayFactory, InjectToken } from './inject';
 import { paramTypesMap } from './injectable';
 import { Constructor } from './interface';
 import { singletonMap, singletonMarks } from './singleton';
+// import { isClass } from './utils';
 
 class Container {
   static _instance: Container;
@@ -45,6 +46,7 @@ class Container {
         console.log('------__RegisterMap');
       });
     }
+
     const isSingleton = singletonMarks.get(Cls);
 
     if (isSingleton) {
@@ -63,18 +65,27 @@ class Container {
         if (this.__debug) {
           console.log(injectTokens, paramTypes, 'injectTokens');
         }
-
         Object.keys(injectTokens).forEach((index) => {
           const { token } = injectTokens[index];
-          paramTypes[+index] = this.__RegisterMap.get(token);
+          let injectParam;
+          if (token instanceof DelayFactory) {
+            injectParam = token;
+          } else {
+            injectParam = this.__RegisterMap.get(token);
+          }
+
+          paramTypes[+index] = injectParam;
         });
       }
 
-      const params = paramTypes.map((depCls) =>
-        this.resolve<typeof depCls>(depCls),
-      );
-
+      const params = paramTypes.map((depCls) => {
+        if (depCls instanceof DelayFactory) {
+          return depCls.createProxy();
+        }
+        return this.resolve<typeof depCls>(depCls);
+      });
       const c = new Cls(...params);
+
       if (isSingleton) {
         singletonMap.set(Cls, c);
       }
@@ -82,6 +93,7 @@ class Container {
     }
 
     const c = new Cls();
+
     if (isSingleton) {
       singletonMap.set(Cls, c);
     }
@@ -93,9 +105,15 @@ class Container {
    * @param token
    * @param options
    */
-  register(token: string | Symbol, options: { useClass: Constructor<any> }) {
+  register(
+    token: string | Symbol,
+    options: { useClass?: Constructor<any>; useFactory?: () => Constructor },
+  ) {
     if (options.useClass) {
       this.__RegisterMap.set(token, options.useClass);
+    }
+    if (options.useFactory) {
+      this.__RegisterMap.set(token, options.useFactory);
     }
   }
 
