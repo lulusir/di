@@ -4,6 +4,7 @@
 // Lazy Initialization: Proxy or factory
 // Manual Dependency Injection: Setter
 import { container } from './container';
+// import { dependencyGraph } from './dependencyGraph';
 import { Constructor } from './interface';
 
 type DelayFn = () => Constructor;
@@ -69,13 +70,10 @@ export const inject =
     // 定义inject的 token
     // https://www.typescriptlang.org/docs/handbook/decorators.html#parameter-decorators
     const metadata = Reflect.getOwnMetadata(InjectToken, target) || {};
-
     metadata[parameterIndex] = {
       token,
     };
-    // console.log(parameterIndex, token, '=========s');
     Reflect.defineMetadata(InjectToken, metadata, target);
-    // todo 判断是否有循环依赖，给出提示
   };
 
 export const delay = (delayFn: DelayFn) => new DelayFactory(delayFn);

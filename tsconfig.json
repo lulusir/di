@@ -2,7 +2,6 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "alwaysStrict": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     // "noUnusedParameters": true,
@@ -18,7 +17,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
-    "strict": true,
+    "strict": false,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,

@@ -1,6 +1,6 @@
 import { delay, inject } from '../inject';
 import { injectable } from '../injectable';
-import { CircleB } from './circleB';
+import { Bar, CircleB } from './circleB';
 
 // interface IB {}
 // a 依赖b
@@ -22,3 +22,7 @@ export class CircleA {
 // export class CircleC {
 //   constructor(public b: () => CircleB) {}
 // }
+@injectable()
+export class Foo {
+  constructor(@inject(delay(() => Bar)) public b: Bar) {}
+}

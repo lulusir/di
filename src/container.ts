@@ -105,15 +105,9 @@ class Container {
    * @param token
    * @param options
    */
-  register(
-    token: string | Symbol,
-    options: { useClass?: Constructor<any>; useFactory?: () => Constructor },
-  ) {
+  register(token: string | Symbol, options: { useClass?: Constructor<any> }) {
     if (options.useClass) {
       this.__RegisterMap.set(token, options.useClass);
-    }
-    if (options.useFactory) {
-      this.__RegisterMap.set(token, options.useFactory);
     }
   }
 

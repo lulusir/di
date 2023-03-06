@@ -1,3 +1,4 @@
+import { dependencyGraph } from './dependencyGraph';
 import { Constructor, ParamType } from './interface';
 
 export const paramTypesMap = new Map<Constructor<any>, ParamType[]>();
@@ -17,5 +18,8 @@ export class CircleA {
   constructor(public b: () => CircleB) {}
 }`);
     }
+
     paramTypesMap.set(target, paramTypes);
+    dependencyGraph.add(target, paramTypes);
+    dependencyGraph.hasLoop();
   };

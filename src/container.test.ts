@@ -2,8 +2,8 @@
 import { container } from './container';
 import { inject } from './inject';
 import { injectable } from './injectable';
-import { CircleA } from './mock/circleA';
-import { CircleB } from './mock/circleB';
+import { CircleA, Foo } from './mock/circleA';
+import { Bar, Baz, CircleB } from './mock/circleB';
 import { singleton } from './singleton';
 
 describe(' container injectable', () => {
@@ -272,10 +272,7 @@ describe('debug', () => {
 
 describe('circle dependency', () => {
   it('one level', () => {
-    // container.debug('lujs');
     const a = container.resolve(CircleA);
-    // expect(1).toBe(2);
-    // console.log(a.b, '==ab.');
     expect(a.b).toBeInstanceOf(CircleB);
     expect(a.name).toBe('A');
     expect(a.b.name).toBe('b');
@@ -298,18 +295,17 @@ describe('circle dependency', () => {
     expect(b1).toBeDefined();
   });
 
-  //   it('deep level a -> b -> c -> a', () => {
-  //     @injectable()
-  // export class A {
-  //   constructor(public b: () => B) {}
-  // }
+  it('deep level a -> b -> c -> a', () => {
+    const foo = container.resolve(Foo);
+    const bar = container.resolve(Bar);
+    const baz = container.resolve(Baz);
 
-  //     const a = container.resolve(CircleA);
-  //     const b = container.resolve(CircleB);
-  //     console.log(a, b);
-  //     expect(b.a).not.toEqual(a);
-  //     expect(a.b).not.toEqual(b);
+    expect(foo).toBeInstanceOf(Foo);
+    expect(bar).toBeInstanceOf(Bar);
+    expect(baz).toBeInstanceOf(Baz);
 
-  //     expect(a.b).toBeInstanceOf(CircleB);
-  //   });
+    expect(foo.b).toBeInstanceOf(Bar);
+    expect(bar.b).toBeInstanceOf(Baz);
+    expect(baz.b).toBeInstanceOf(Foo);
+  });
 });

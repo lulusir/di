@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for inject.ts</title>
+    <title>Code coverage report for dependencyGraph.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> inject.ts</h1>
+        <h1><a href="index.html">All files</a> dependencyGraph.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.3% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/26</span>
+                <span class='fraction'>34/34</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/24</span>
+                <span class='fraction'>34/34</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -142,32 +142,27 @@
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -179,127 +174,192 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable no-param-reassign */
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-underscore-dangle */
-// Eager Initialization: cache all ，just like spring
-// Lazy Initialization: Proxy or factory
-// Manual Dependency Injection: Setter
-import { container } from './container';
-// import { dependencyGraph } from './dependencyGraph';
 import { Constructor } from './interface';
 &nbsp;
-type DelayFn = () =&gt; Constructor;
-&nbsp;
-export const InjectToken = Symbol('InjectToken');
-&nbsp;
 /**
- * DelayFactory
- * it will create proxy object by delay create function
-&nbsp;
- * such as Foo -&gt; Bar , Bar -&gt; Foo
- * 0. create Foo
- * 1. if Bar is delay ,create Proxy Bar, delay create Bar
- * 2. inject Proxy Bar to Foo
- * 4. if need create Bar, if Foo is delay ,create Proxy Foo, delay create Foo
+ * todo
+ * 构建一个依赖图
+ * - 插入图，每个节点为一个类
+ * - 判断是否有循环依赖
+ * - 判断当前类是否有循环依赖，并给出提示
  */
-export class DelayFactory {
-  private <span class="cstat-no" title="statement not covered" >reflectMethods: ReadonlyArray&lt;keyof ProxyHandler&lt;any&gt;&gt; = [</span>
-    'get',
-    'getPrototypeOf',
-    'setPrototypeOf',
-    'getOwnPropertyDescriptor',
-    'defineProperty',
-    'has',
-    'set',
-    'deleteProperty',
-    'apply',
-    'construct',
-    'ownKeys',
-  ];
+export class DependencyGraph {
+  /**
+   * a -&gt; b, c, ...
+   * b -&gt; c ,d, a ...
+   */
+  graph: Map&lt;Constructor, Constructor[]&gt; = new Map();
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(public <span class="cstat-no" title="statement not covered" >d</span>elayFn: DelayFn)</span> {}
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  _target: any = null;</span>
-&nbsp;
-<span class="fstat-no" title="function not covered" >  get t</span>arget() {
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (this._target === null) {</span>
-<span class="cstat-no" title="statement not covered" >      this._target = container.resolve(this.delayFn());</span>
+  add(from: Constructor, to: Constructor[]) {
+    let t = this.graph.get(from);
+    if (t) {
+      t = [...t, ...to];
+      this.graph.set(from, t);
+    } else {
+      this.graph.set(from, to);
     }
-<span class="cstat-no" title="statement not covered" >    return this._target;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  createProxy(</span>) {
-    const handler: ProxyHandler&lt;object&gt; = <span class="cstat-no" title="statement not covered" >{};</span>
-    const install = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(n</span>ame: keyof ProxyHandler&lt;any&gt;): void =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      handler[name] = <span class="fstat-no" title="function not covered" >(.</span>..args: any[]) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        args[0] = this.target;</span>
-        const method = <span class="cstat-no" title="statement not covered" >Reflect[name];</span>
-<span class="cstat-no" title="statement not covered" >        return (method as any)(...args);</span>
-      };
-    };
-<span class="cstat-no" title="statement not covered" >    this.reflectMethods.forEach(install);</span>
+  private _visited = new Map&lt;Constructor, boolean&gt;();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return new Proxy&lt;any&gt;({} as any, handler);</span>
+  private _path = new Map&lt;Constructor, boolean&gt;();
+&nbsp;
+  private _pathStack: Constructor[] = [];
+&nbsp;
+  private _hasLoop = false;
+&nbsp;
+  /**
+   * 判断图是否有循环，并打印出循环路径
+   * 如 a -&gt; b -&gt; c -&gt; a
+   */
+  hasLoop() {
+    this._hasLoop = false;
+&nbsp;
+    const to = this.graph.keys();
+&nbsp;
+    for (const t of to) {
+      this.traverse(t);
+    }
+&nbsp;
+    this._visited = new Map&lt;Constructor, boolean&gt;();
+    this._path = new Map&lt;Constructor, boolean&gt;();
+    this._pathStack = [];
+&nbsp;
+    if (this._hasLoop) {
+      console.warn(
+        `Has Circular dependencies:
+${this._pathStack.join(' -&gt; ').toString()}`,
+      );
+      console.warn(`
+please use lazy inject，For example：
+&nbsp;
+@injectable()
+export class CircleA {
+  constructor(@inject(delay(() =&gt; CircleB)) public b: CircleB) {}
+}
+&nbsp;
+@injectable()
+export class CircleB {
+  constructor(@inject(delay(() =&gt; CircleA)) public a: CircleA) {}
+}
+`);
+    }
+&nbsp;
+    return this._hasLoop;
+  }
+&nbsp;
+  private traverse(v: Constructor) {
+    this._pathStack.push(v);
+&nbsp;
+    if (this._path.get(v)) {
+      this._hasLoop = true;
+    }
+&nbsp;
+    if (this._visited.get(v) || this._hasLoop) {
+      return;
+    }
+    this._visited.set(v, true);
+    this._path.set(v, true);
+    const to = this.graph.get(v);
+    to?.forEach((t) =&gt; {
+      this.traverse(t);
+    });
+    this._path.set(v, false);
+    // this._pathStack.pop();
   }
 }
 &nbsp;
-type ITokenType = string | symbol | DelayFactory;
-&nbsp;
-export const inject =
-  (token: ITokenType) =&gt;
-  (target: Object, propertyKey: string | symbol, parameterIndex: number) =&gt; {
-    // 定义inject的 token
-    // https://www.typescriptlang.org/docs/handbook/decorators.html#parameter-decorators
-    const metadata = Reflect.getOwnMetadata(InjectToken, target) || {};
-    metadata[parameterIndex] = {
-      token,
-    };
-    Reflect.defineMetadata(InjectToken, metadata, target);
-  };
-&nbsp;
-export const delay = <span class="fstat-no" title="function not covered" >(d</span>elayFn: DelayFn) =&gt; <span class="cstat-no" title="statement not covered" >new DelayFactory(delayFn);</span>
+export const dependencyGraph = new DependencyGraph();
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
