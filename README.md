@@ -68,3 +68,16 @@ const a = container.resolve(A);
 expect(a.b).toBeDefined();
 expect(a.b).toBeInstanceOf(B1);
 ```
+### circular dependency
+Use proxy objects to solve circular dependency problems. But you should approach this from the perspective of code design
+```typescript
+@injectable()
+export class CircleA {
+  constructor(@inject(delay(() => CircleB)) public b: CircleB) {}
+}
+
+@injectable()
+export class CircleB {
+  constructor(@inject(delay(() => CircleA)) public a: CircleA) {}
+}
+```
